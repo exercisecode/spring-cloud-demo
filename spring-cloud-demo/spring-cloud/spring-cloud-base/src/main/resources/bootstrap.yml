@@ -2,10 +2,22 @@
 spring:
     application: 
         name: spring-cloud-base
-    profiles:
-        active: cloud    
     cloud:
         config:
             enabled: false 
             uri: ${SPRING_CONFIG_URI:http://127.0.0.1:30000/}
             
+eureka:
+    instanse:
+        hostname:${APPLICATION_DOMAIN}
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:21000/eureka/           
+
+endpoints:
+    restart: 
+        enabled: true
+    shutdown:
+        enabled: true
+    health:
+        sensitive: false                    

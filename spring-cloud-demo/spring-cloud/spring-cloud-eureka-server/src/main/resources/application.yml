@@ -1,0 +1,16 @@
+
+ 
+
+
+server:
+    port: 21000
+
+    
+eureka:
+    client:
+       registerWithEureka: false
+       fetchRegistry: false
+    server:
+        waitTimeInMsWhenSyncEmpty: 0       
+        
+        
